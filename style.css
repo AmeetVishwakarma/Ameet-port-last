@@ -119,6 +119,7 @@ body{
     margin-left: 5px;
     color: var(--green);
     font-weight: bold;
+    font-family: var(--roboto-font);
 }
 .LogoImage{
     -webkit-animation:spin 4s linear infinite;
@@ -450,15 +451,125 @@ body{
     color: var(--green);
     text-decoration: none;
     font-size: 19px;
+    position: relative;
+}
+
+.text-ani::before{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: var(--green);
+    position: absolute;
+    left: 0;
+    top:25px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.text-ani:hover::before{
+    width: 110px;
 }
 
 .check{
     font-size: 20px;
 }
 
+.direct-links{
+    position: relative;
+    position: fixed;
+}
+
+.left-links{
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    left: 46px;
+    top: 180px;
+    gap: 20px;
+}
+.left-links > i{
+    color: var(--light-slate);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.left-links > i:hover{
+    color: var(--green);
+    transform: translateY(-10%);
+}
+
+.left-links::before{
+    content: '';
+    width: 1px;
+    height: 136px;
+    background-color: var(--light-slate);
+    position: absolute;
+    top: 200px;
+    left: 8px;
+
+}
+
+.right-email{
+    position: relative;
+    position: fixed;
+}
+
+.right-mail{
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    left: 1048px;
+    top: 255px;
+    gap: 20px;
+    font-size: var(--fz-xxs);
+    line-height: var(--fz-lg);
+}
+.right-mail::after{
+    content: '';
+    width: 1px;
+    height: 136px;
+    background-color: var(--light-slate);
+    position: absolute;
+    top: 125px;
+    left: 92px;
+
+}
+.mail-text{
+    rotate: 90deg;
+}
+.mail-text > .right-a{
+    font-family: var(--fira-font);
+    text-decoration: none;
+    color: var(--light-slate);
+    transition: var(--transition);
+}
+
+.mail-text > .right-a:hover{
+    color: var(--green);
+}
+
+
+
 
 @media screen and (max-width: 768px){
     
+    /* ameet css */
+    .head-para{
+        margin: 2px 0px 0px 0px;
+        line-height: 36px;
+    }
+
+    .direct-links{
+        display: none;
+    }
+
+    .right-email{
+        display: none;
+    }
+
+    /* ameet end  */
+
     .nav-link{
         padding: 10px 0px;
         margin: 0px;
