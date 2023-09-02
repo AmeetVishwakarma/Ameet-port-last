@@ -412,7 +412,7 @@ body{
     text-decoration: none;
     transition: var(--transition);
     margin-left: 15px;
-    font-size: var(--fz-xs);
+    font-size: var(--fz-xxl);
 }
 .button-new:hover{
     color: var(--green);
@@ -457,11 +457,11 @@ body{
 .text-ani::before{
     content: '';
     width: 0px;
-    height: 2px;
+    height: 0.5px;
     background-color: var(--green);
     position: absolute;
     left: 0;
-    top:25px;
+    top:20px;
     border-radius: 10px;
     transition: var(--transition);
 }
@@ -471,7 +471,8 @@ body{
 }
 
 .check{
-    font-size: 20px;
+    font-size: 15px;
+    padding: 15px 15px
 }
 
 .direct-links{
@@ -519,7 +520,7 @@ body{
     position: absolute;
     display: flex;
     flex-direction: column; 
-    left: 1048px;
+    left: 1112px;
     top: 255px;
     gap: 20px;
     font-size: var(--fz-xxs);
@@ -545,11 +546,23 @@ body{
     transition: var(--transition);
 }
 
-.mail-text > .right-a:hover{
+.mail-text :hover{
     color: var(--green);
+    transform: translateY(-10%);
 }
 
-
+.test-btn{
+    border: 1px solid var(--green);
+    background: transparent;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+.test-btn:hover{
+    box-shadow: 4px 4px 0px 0px var(--green);
+    transform: translateX(-4%);
+}
 
 
 @media screen and (max-width: 768px){
